@@ -42,9 +42,9 @@ A huge number of sites — online cinemas, courses, webinars, sports streams, em
 
 ## How to use
 
-1. Download the latest release, unzip, and run the installer.
-2. Launch the app, paste your `.m3u8` stream link.
-3. *(optional)* set a file name and choose a folder.
+1. Download the latest release and unzip it.
+2. Launch **M3U8 Downloader** from the unzipped folder.
+3. Paste your `.m3u8` stream link, optionally set a file name and output folder.
 4. Click **Download MP4** — when it finishes, the folder opens with your video.
 
 > **Where do I get the `.m3u8` link?** Open the video in your browser, press `F12` → **Network** tab → type `m3u8` in the filter → copy the playlist address while the video is playing, and paste it here.
@@ -55,7 +55,7 @@ A huge number of sites — online cinemas, courses, webinars, sports streams, em
 
 ## Download
 
-➡️ **[Download the latest release](../../releases/latest)** — unzip and run the installer. Windows 10 / 11, 64-bit.
+➡️ **[Download the latest release](../../releases/latest)** — unzip and launch **M3U8 Downloader**. Windows 10 / 11, 64-bit.
 
 ## Built with
 
