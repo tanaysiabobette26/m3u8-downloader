@@ -1,0 +1,13 @@
+# build output
+bin/
+obj/
+build/
+buildui/
+
+# bundled third-party binaries (download per BUILD.md, not committed)
+src/embed/
+
+# release artifacts (go to GitHub Releases, not the repo)
+M3u8Downloader.zip
+
+*.user
