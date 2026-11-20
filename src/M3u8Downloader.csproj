@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>M3u8Downloader</AssemblyName>
+    <RootNamespace>M3u8Downloader</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Product>M3u8 Downloader</Product>
+    <AssemblyTitle>M3u8 Downloader</AssemblyTitle>
+    <Company>M3u8 Downloader</Company>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+
+    <!-- single portable exe -->
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- tools carried inside the exe, extracted to %LOCALAPPDATA% on first run.
+         Pass -p:NoEmbed=true for a fast UI-only build (render/design iteration). -->
+    <EmbeddedResource Include="embed\N_m3u8DL-RE.exe" Condition="'$(NoEmbed)' != 'true'">
+      <LogicalName>N_m3u8DL-RE.exe</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="embed\ffmpeg.exe" Condition="'$(NoEmbed)' != 'true'">
+      <LogicalName>ffmpeg.exe</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
